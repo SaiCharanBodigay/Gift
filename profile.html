@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Gift Groove</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile-styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="logo">
+                    <svg class="logo-svg" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- Script Text "Gift Groove" -->
+                        <text x="10" y="70" font-family="cursive" font-size="60" font-weight="bold" fill="#2C2C2C" style="font-style: italic;">Gift Groove</text>
+                        
+                        <!-- Decorative Butterfly -->
+                        <g transform="translate(320, 35)">
+                            <!-- Left Wing -->
+                            <path d="M -15 0 Q -20 -15 -15 -25 Q -10 -20 -8 0 Z" fill="none" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Right Wing -->
+                            <path d="M 15 0 Q 20 -15 15 -25 Q 10 -20 8 0 Z" fill="none" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Body -->
+                            <circle cx="0" cy="0" r="3" fill="#2C2C2C"/>
+                            <!-- Antennae -->
+                            <line x1="0" y1="-3" x2="-5" y2="-15" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="0" y1="-3" x2="5" y2="-15" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <button class="nav-btn" onclick="goHome()">Shop</button>
+                <button class="nav-btn">About</button>
+                <button class="nav-btn">Contact</button>
+                <button class="nav-btn cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    Cart
+                </button>
+                <div id="navAuth"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Container -->
+    <main class="profile-main">
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <span id="profileInitial">U</span>
+                </div>
+                <div class="profile-info">
+                    <h1 id="profileName">User Name</h1>
+                    <p id="profileEmail">user@example.com</p>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="profile-section">
+                    <h2>Account Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>First Name</label>
+                            <p id="firstName">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Last Name</label>
+                            <p id="lastName">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Email Address</label>
+                            <p id="email">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone Number</label>
+                            <p id="phone">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Account Created</label>
+                            <p id="createdAt">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Member Status</label>
+                            <p id="memberStatus">Active</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h2>Quick Actions</h2>
+                    <div class="actions-grid">
+                        <button class="action-btn" onclick="goHome()">
+                            <span>🛍️</span>
+                            Continue Shopping
+                        </button>
+                        <button class="action-btn" onclick="handleOrders()">
+                            <span>📦</span>
+                            My Orders
+                        </button>
+                        <button class="action-btn" onclick="handleWishlist()">
+                            <span>❤️</span>
+                            Wishlist
+                        </button>
+                        <button class="action-btn" onclick="handleSettings()">
+                            <span>⚙️</span>
+                            Settings
+                        </button>
+                    </div>
+                </div>
+
+                <div class="profile-section danger-zone">
+                    <h2>Account</h2>
+                    <button class="logout-btn" onclick="handleLogout()">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="navbar-auth.js"></script>
+    <script src="profile-script.js"></script>
+</body>
+</html>

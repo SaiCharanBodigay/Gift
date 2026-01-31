@@ -1,0 +1,34 @@
+# Node
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Environment
+.env
+backend/.env
+.env.local
+.env.*
+
+# Database
+backend/giftgroove.db
+*.db
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Build
+dist/
+build/
+
+# Misc
+.idea/
+coverage/
+

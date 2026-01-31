@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gift Groove</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="logo">
+                    <svg class="logo-svg" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- Script Text "Gift Groove" -->
+                        <text x="10" y="70" font-family="cursive" font-size="60" font-weight="bold" fill="#2C2C2C" style="font-style: italic;">Gift Groove</text>
+                        
+                        <!-- Decorative Butterfly -->
+                        <g transform="translate(320, 35)">
+                            <!-- Left Wing -->
+                            <path d="M -15 0 Q -20 -15 -15 -25 Q -10 -20 -8 0 Z" fill="none" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Right Wing -->
+                            <path d="M 15 0 Q 20 -15 15 -25 Q 10 -20 8 0 Z" fill="none" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Body -->
+                            <circle cx="0" cy="0" r="3" fill="#2C2C2C"/>
+                            <!-- Antennae -->
+                            <line x1="0" y1="-3" x2="-5" y2="-15" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="0" y1="-3" x2="5" y2="-15" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <button class="nav-btn" onclick="goHome()">Home</button>
+                <button class="nav-btn">Shop</button>
+                <button class="nav-btn">About</button>
+                <button class="nav-btn">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Container -->
+    <main class="login-main">
+        <div class="login-container">
+            <div class="login-box">
+                <h1 class="login-title">Welcome Back</h1>
+                <p class="login-subtitle">Sign in to your Gift Groove account</p>
+
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="Enter your phone number" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Enter your password" 
+                            required
+                        >
+                    </div>
+
+                    <div class="form-remember">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+
+                    <button type="submit" class="login-btn">Sign In</button>
+                </form>
+
+                <div class="login-divider">
+                    <span>or</span>
+                </div>
+
+                <button class="social-btn google-btn" onclick="handleGoogleLogin()">
+                    <span class="icon">🔍</span>
+                    Sign in with Google
+                </button>
+
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="#" onclick="handleSignUp()">Sign Up</a></p>
+                    <p><a href="#" onclick="handleForgotPassword()">Forgot Password?</a></p>
+                </div>
+            </div>
+
+            <!-- Decorative Side -->
+            <div class="login-decoration">
+                <svg class="decoration-butterfly" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <g id="decorButterflyGroup">
+                        <!-- Left Upper Wing -->
+                        <path d="M 80 60 Q 60 20 55 40 Q 50 80 80 100 Z" fill="#FF1493" opacity="0.7"/>
+                        <circle cx="70" cy="45" r="6" fill="#FFD700" opacity="0.6"/>
+                        
+                        <!-- Right Upper Wing -->
+                        <path d="M 120 60 Q 140 20 145 40 Q 150 80 120 100 Z" fill="#FF1493" opacity="0.7"/>
+                        <circle cx="130" cy="45" r="6" fill="#FFD700" opacity="0.6"/>
+                        
+                        <!-- Left Lower Wing -->
+                        <path d="M 85 100 Q 65 120 70 150 Q 85 155 95 130 Z" fill="#FFB6D9" opacity="0.6"/>
+                        
+                        <!-- Right Lower Wing -->
+                        <path d="M 115 100 Q 135 120 130 150 Q 115 155 105 130 Z" fill="#FFB6D9" opacity="0.6"/>
+                        
+                        <!-- Body -->
+                        <ellipse cx="100" cy="100" rx="7" ry="28" fill="#2C2C2C" opacity="0.5"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </main>
+
+    <script src="login-script-updated.js"></script>
+</body>
+</html>

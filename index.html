@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Groove - Online Gift Selling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-content">
+            <svg id="butterfly" class="butterfly" viewBox="0 0 200 200" width="160" height="160">
+                <!-- Butterfly SVG - Improved Design -->
+                <g id="butterflyGroup">
+                    <!-- Left Upper Wing -->
+                    <path d="M 80 60 Q 60 20 55 40 Q 50 80 80 100 Z" fill="#FF1493" opacity="0.95"/>
+                    <circle cx="70" cy="45" r="6" fill="#FFD700" opacity="0.8"/>
+                    <circle cx="65" cy="65" r="5" fill="#FFD700" opacity="0.8"/>
+                    <path d="M 70 45 Q 75 50 73 60" stroke="#FFF" stroke-width="1.5" fill="none" opacity="0.6"/>
+                    
+                    <!-- Right Upper Wing -->
+                    <path d="M 120 60 Q 140 20 145 40 Q 150 80 120 100 Z" fill="#FF1493" opacity="0.95"/>
+                    <circle cx="130" cy="45" r="6" fill="#FFD700" opacity="0.8"/>
+                    <circle cx="135" cy="65" r="5" fill="#FFD700" opacity="0.8"/>
+                    <path d="M 130 45 Q 125 50 127 60" stroke="#FFF" stroke-width="1.5" fill="none" opacity="0.6"/>
+                    
+                    <!-- Left Lower Wing -->
+                    <path d="M 85 100 Q 65 120 70 150 Q 85 155 95 130 Z" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="75" cy="130" r="4" fill="#FFD700" opacity="0.7"/>
+                    <path d="M 78 115 Q 75 125 78 135" stroke="#FFF" stroke-width="1" fill="none" opacity="0.5"/>
+                    
+                    <!-- Right Lower Wing -->
+                    <path d="M 115 100 Q 135 120 130 150 Q 115 155 105 130 Z" fill="#FFB6D9" opacity="0.9"/>
+                    <circle cx="125" cy="130" r="4" fill="#FFD700" opacity="0.7"/>
+                    <path d="M 122 115 Q 125 125 122 135" stroke="#FFF" stroke-width="1" fill="none" opacity="0.5"/>
+                    
+                    <!-- Body -->
+                    <ellipse cx="100" cy="100" rx="7" ry="28" fill="#2C2C2C"/>
+                    <ellipse cx="100" cy="88" rx="6" ry="8" fill="#1a1a1a"/>
+                    
+                    <!-- Head -->
+                    <circle cx="100" cy="72" r="7" fill="#2C2C2C"/>
+                    <circle cx="98" cy="70" r="2" fill="#FFD700"/>
+                    <circle cx="102" cy="70" r="2" fill="#FFD700"/>
+                    
+                    <!-- Antennae -->
+                    <path d="M 100 65 Q 92 55 88 48" stroke="#2C2C2C" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                    <path d="M 100 65 Q 108 55 112 48" stroke="#2C2C2C" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                    <circle cx="88" cy="48" r="3" fill="#FF1493"/>
+                    <circle cx="112" cy="48" r="3" fill="#FF1493"/>
+                </g>
+            </svg>
+            
+            <div class="text-trail" id="textTrail"></div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="logo">
+                    <svg class="logo-svg" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- Script Text "Gift Groove" -->
+                        <text x="10" y="70" font-family="cursive" font-size="60" font-weight="bold" fill="#2C2C2C" style="font-style: italic;">Gift Groove</text>
+                        
+                        <!-- Decorative Butterfly -->
+                        <g transform="translate(320, 35)">
+                            <!-- Left Wing -->
+                            <path d="M -15 0 Q -20 -15 -15 -25 Q -10 -20 -8 0 Z" fill="none" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Right Wing -->
+                            <path d="M 15 0 Q 20 -15 15 -25 Q 10 -20 8 0 Z" fill="none" stroke="#2C2C2C" stroke-width="2" stroke-linecap="round"/>
+                            <!-- Body -->
+                            <circle cx="0" cy="0" r="3" fill="#2C2C2C"/>
+                            <!-- Antennae -->
+                            <line x1="0" y1="-3" x2="-5" y2="-15" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round"/>
+                            <line x1="0" y1="-3" x2="5" y2="-15" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <button class="nav-btn">Shop</button>
+                <button class="nav-btn">About</button>
+                <button class="nav-btn">Contact</button>
+                <button class="nav-btn cart-btn">
+                    <span class="cart-icon">🛒</span>
+                    Cart
+                </button>
+                <button class="nav-btn login-btn">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <section class="hero">
+            <h1>Welcome to Gift Groove</h1>
+            <p>Discover the perfect gifts for your loved ones</p>
+            <button class="cta-btn">Start Shopping</button>
+        </section>
+    </main>
+
+    <script src="navbar-auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
